@@ -227,8 +227,8 @@
       inset: 0;
       background-image: url('images/hero-sailboat.jpg');
       background-size: cover;
-      background-position: center 30%;
-      opacity: 0.28;
+      background-position: center 75%;
+      opacity: 0.14;
       filter: saturate(0.55);
     }
 
@@ -923,6 +923,276 @@
       .gallery-item { height: 200px; }
       .gallery-item:nth-child(1) { grid-column: span 1; }
     }
+
+    /* ════════════════════════════════════════
+       GALLERY — sailing portrait fix
+    ════════════════════════════════════════ */
+    .gallery-item:nth-child(6) img { object-position: top center; }
+
+    /* ════════════════════════════════════════
+       TELEHEALTH
+    ════════════════════════════════════════ */
+    .telehealth {
+      background: var(--teal-deep);
+      padding: 6.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .telehealth::before {
+      content: '';
+      position: absolute;
+      top: -30%; right: -10%;
+      width: 500px; height: 500px;
+      background: var(--teal);
+      border-radius: 50%;
+      opacity: 0.18;
+    }
+
+    .telehealth-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .telehealth-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .telehealth-header .section-label { color: rgba(245,237,214,0.6); }
+    .telehealth-header .section-title { color: var(--cream); }
+    .telehealth-header .divider { margin-bottom: 1.25rem; }
+    .telehealth-header p {
+      color: rgba(245,237,214,0.65);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .telehealth-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: rgba(245,237,214,0.07);
+      border: 1px solid rgba(245,237,214,0.15);
+      border-radius: 10px;
+      padding: 1.1rem 1.4rem;
+      margin-top: 1.5rem;
+    }
+    .telehealth-badge svg {
+      width: 22px; height: 22px;
+      stroke: var(--rust-light);
+      fill: none;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+    .telehealth-badge span {
+      color: rgba(245,237,214,0.8);
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .telehealth-visual {
+      background: rgba(245,237,214,0.05);
+      border: 1px solid rgba(245,237,214,0.12);
+      border-radius: 16px;
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .telehealth-icon-wrap {
+      width: 80px; height: 80px;
+      background: linear-gradient(135deg, var(--teal), var(--teal-light));
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .telehealth-icon-wrap svg {
+      width: 40px; height: 40px;
+      stroke: var(--cream);
+      fill: none;
+      stroke-width: 1.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .telehealth-visual h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--cream);
+      text-align: center;
+    }
+    .telehealth-visual p {
+      color: rgba(245,237,214,0.55);
+      font-size: 0.85rem;
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    .telehealth-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .telehealth-feature {
+      background: rgba(245,237,214,0.05);
+      border: 1px solid rgba(245,237,214,0.1);
+      border-radius: 12px;
+      padding: 1.75rem 1.5rem;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .telehealth-feature:hover {
+      background: rgba(245,237,214,0.09);
+      border-color: rgba(245,237,214,0.22);
+    }
+    .telehealth-feature svg {
+      width: 28px; height: 28px;
+      stroke: var(--rust-light);
+      fill: none;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .telehealth-feature h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+    }
+    .telehealth-feature p {
+      color: rgba(245,237,214,0.55);
+      font-size: 0.83rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 820px) {
+      .telehealth-header { grid-template-columns: 1fr; gap: 2rem; }
+      .telehealth-features { grid-template-columns: 1fr; }
+    }
+
+    /* ════════════════════════════════════════
+       BLOG
+    ════════════════════════════════════════ */
+    .blog { background: var(--white); padding: 6.5rem 2rem; }
+
+    .blog-header { text-align: center; margin-bottom: 3.5rem; }
+    .blog-header .divider { margin: 1rem auto 1.25rem; }
+    .blog-header p {
+      color: var(--text-mid);
+      font-size: 0.95rem;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      max-width: 1180px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .blog-card {
+      border: 1px solid var(--cream-dark);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(48,92,83,0.1);
+    }
+
+    .blog-card-thumb {
+      height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-card-thumb.travel { background: linear-gradient(135deg, var(--teal-dark), var(--teal-light)); }
+    .blog-card-thumb.research { background: linear-gradient(135deg, #2C4A3E, #4A7C72); }
+    .blog-card-thumb.news { background: linear-gradient(135deg, var(--rust), var(--rust-light)); }
+
+    .blog-card-thumb svg {
+      width: 52px; height: 52px;
+      stroke: rgba(245,237,214,0.5);
+      fill: none;
+      stroke-width: 1.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .blog-category {
+      position: absolute;
+      top: 1rem; left: 1rem;
+      background: rgba(0,0,0,0.3);
+      color: var(--cream);
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 100px;
+    }
+
+    .blog-card-body {
+      padding: 1.6rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-date {
+      font-size: 0.75rem;
+      color: var(--text-mid);
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.04em;
+    }
+    .blog-card-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--teal-dark);
+      margin-bottom: 0.65rem;
+      line-height: 1.35;
+    }
+    .blog-card-body p {
+      color: var(--text-mid);
+      font-size: 0.85rem;
+      line-height: 1.7;
+      flex: 1;
+    }
+    .blog-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--teal);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 1.1rem;
+      transition: gap 0.2s;
+    }
+    .blog-read-more:hover { gap: 0.65rem; color: var(--teal-dark); }
+
+    .blog-cta { text-align: center; }
+
+    @media (max-width: 820px) {
+      .blog-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 
@@ -940,8 +1210,9 @@
 
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
+    <li><a href="#telehealth">Telehealth</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#blog">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#signup" class="nav-cta">Book Now</a></li>
   </ul>
@@ -954,8 +1225,9 @@
 <!-- Mobile Nav -->
 <div class="mobile-nav" id="mobile-nav">
   <a href="#services" class="mobile-link">Services</a>
+  <a href="#telehealth" class="mobile-link">Telehealth</a>
   <a href="#about" class="mobile-link">About</a>
-  <a href="#gallery" class="mobile-link">Gallery</a>
+  <a href="#blog" class="mobile-link">Blog</a>
   <a href="#contact" class="mobile-link">Contact</a>
   <a href="#signup" class="mobile-link mobile-cta">Book a Session</a>
 </div>
@@ -1064,6 +1336,70 @@
   </div>
 </section>
 
+<!-- ═══════════════ TELEHEALTH ═══════════════ -->
+<section class="telehealth" id="telehealth">
+  <div class="telehealth-inner">
+    <div class="telehealth-header">
+      <div>
+        <span class="section-label">Online Therapy</span>
+        <h2 class="section-title">Care From<br>Anywhere</h2>
+        <div class="divider"></div>
+        <p>
+          Not every session requires you to come in. The Anchor Ventura now offers telehealth services so you can receive expert physical therapy guidance from the comfort of your home — whether you're in Ventura, traveling, or simply prefer the convenience of virtual care.
+        </p>
+        <p style="color:rgba(245,237,214,0.65);font-size:0.95rem;line-height:1.8;margin-top:0.75rem;">
+          Telehealth sessions are ideal for follow-up consultations, home exercise program reviews, movement coaching, and ongoing education — all via secure video call.
+        </p>
+        <div class="telehealth-badge">
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+          <span>HIPAA-conscious, easy to join — just a link sent to your phone or email. No app download required.</span>
+        </div>
+      </div>
+      <div class="telehealth-visual">
+        <div class="telehealth-icon-wrap">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>Virtual Sessions Available</h3>
+        <p>Book a telehealth appointment and connect with Greg face-to-face over video — same expertise, zero commute.</p>
+        <a href="#signup" class="btn-primary" style="margin-top:0.5rem;font-size:0.85rem;padding:0.75rem 1.75rem;">Book a Telehealth Session</a>
+      </div>
+    </div>
+
+    <div class="telehealth-features">
+      <div class="telehealth-feature">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <h4>Home Exercise Review</h4>
+        <p>Get real-time feedback on your exercise form and progress from the comfort of your living room.</p>
+      </div>
+      <div class="telehealth-feature">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <h4>Follow-Up Consultations</h4>
+        <p>Stay on track with scheduled check-ins after in-person sessions — no need to drive in every time.</p>
+      </div>
+      <div class="telehealth-feature">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h4>Injury Prevention Coaching</h4>
+        <p>Movement screenings, posture assessments, and education sessions delivered virtually.</p>
+      </div>
+      <div class="telehealth-feature">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        <h4>Sports Performance Guidance</h4>
+        <p>Training plans and athletic recovery support for athletes who can't always make it in person.</p>
+      </div>
+      <div class="telehealth-feature">
+        <svg viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        <h4>Wellness &amp; Lifestyle Support</h4>
+        <p>Holistic health coaching incorporating functional medicine principles and natural recovery strategies.</p>
+      </div>
+      <div class="telehealth-feature">
+        <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        <h4>Available Statewide</h4>
+        <p>Licensed to provide telehealth services throughout California — reach us from anywhere in the state.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════ ABOUT ═══════════════ -->
 <section class="about" id="about">
   <div class="about-inner">
@@ -1090,13 +1426,16 @@
       </div>
 
       <p>
-        I coached competitive youth soccer for 12 years, and my path toward becoming a Physical Therapist began when one of my players fell into a seizure. In that moment, I realized I lacked the health knowledge and true understanding of the human body to be of real assistance — or a great mentor — to my students.
+        I coached competitive youth soccer for 12 years, and my path toward becoming a Physical Therapist began during a pivotal moment on the field when one of my players experienced a medical emergency. In that instant, I realized I lacked the depth of knowledge needed to truly support my athletes — not just as a coach, but as a mentor responsible for their well-being.
       </p>
       <p>
-        That experience sparked a pursuit that led me to earn my Doctorate in Physical Therapy. As a practicing therapist for over 3 years, I'm motivated to help the Ventura community with body maintenance so that people can continue to enjoy all the things they love to do.
+        That experience ignited a deeper pursuit of understanding the human body, ultimately leading me to earn my Doctorate in Physical Therapy. Over the past three years in practice, I've been driven by a commitment to help others stay active, resilient, and connected to the activities they love.
       </p>
       <p>
-        I believe our bodies are important gateways to having a healthy and strong life. Whether you're recovering from injury or simply want to move better — I'm here to be your anchor.
+        My approach extends beyond traditional therapy. I have a deep passion for movement, health, and wellness — shaped by the teachings of pioneers in human physiology such as Wim Hof and Dr. Stig Severinsen. I incorporate principles of natural healing into my work, drawing from herbal remedies, functional medicine, and naturopathy to support the body's innate ability to recover and thrive.
+      </p>
+      <p>
+        I believe our bodies are powerful gateways to a strong and vibrant life. Whether you're recovering from injury or simply looking to move and feel better, I'm here to support you every step of the way.
       </p>
 
       <div class="about-passions">
@@ -1156,6 +1495,61 @@
   </blockquote>
   <cite>— Greg Kaganovsky, DPT &nbsp;|&nbsp; The Anchor Ventura Physical Therapy</cite>
 </div>
+
+<!-- ═══════════════ BLOG ═══════════════ -->
+<section class="blog" id="blog">
+  <div class="blog-header container">
+    <span class="section-label">Stories &amp; Insights</span>
+    <h2 class="section-title">From the Field &amp; the Clinic</h2>
+    <div class="divider"></div>
+    <p>Travel dispatches, health research, and practice news — written from someone who lives and breathes the active life.</p>
+  </div>
+
+  <div class="blog-grid">
+    <div class="blog-card">
+      <div class="blog-card-thumb travel">
+        <span class="blog-category">Travel</span>
+        <svg viewBox="0 0 24 24"><path d="M3 17l9-13 9 13H3z"/><path d="M12 4v16M3 17h18"/></svg>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-date">Coming Soon</span>
+        <h3>Channel Islands: Sailing, Diving &amp; Recovery in the Wild</h3>
+        <p>A week on the water exploring Santa Cruz Island — what the ocean teaches you about movement, stillness, and the body's capacity to heal.</p>
+        <a href="#" class="blog-read-more">Read more →</a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-card-thumb research">
+        <span class="blog-category">Research</span>
+        <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-date">Coming Soon</span>
+        <h3>Breath, Cold &amp; Recovery: What the Science Says</h3>
+        <p>Exploring the physiology behind breathwork and cold exposure — from Wim Hof to Dr. Stig Severinsen — and how these practices complement physical therapy.</p>
+        <a href="#" class="blog-read-more">Read more →</a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-card-thumb news">
+        <span class="blog-category">News</span>
+        <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-date">April 2025</span>
+        <h3>Telehealth Is Now Available at The Anchor Ventura</h3>
+        <p>We're excited to announce virtual physical therapy sessions — same personalized care, now accessible from anywhere in California.</p>
+        <a href="#telehealth" class="blog-read-more">Learn more →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-cta">
+    <a href="#signup" class="btn-primary">Stay in the Loop — Subscribe Below</a>
+  </div>
+</section>
 
 <!-- ═══════════════ SIGNUP / BOOK ═══════════════ -->
 <section class="signup" id="signup">
@@ -1220,7 +1614,9 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#telehealth">Telehealth</a></li>
         <li><a href="#about">About Greg</a></li>
+        <li><a href="#blog">Blog</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#signup">Book Now</a></li>
       </ul>
