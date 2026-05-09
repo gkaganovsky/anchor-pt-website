@@ -1557,14 +1557,15 @@
 
     <div class="signup-form-wrap">
       <h3>Book a Free Consultation</h3>
-      <form class="form-group" onsubmit="handleSubmit(event)">
+      <form class="form-group" name="booking" netlify onsubmit="handleSubmit(event)">
+        <input type="hidden" name="form-name" value="booking" />
         <div class="form-row-2">
-          <input type="text" placeholder="First Name" required />
-          <input type="text" placeholder="Last Name" required />
+          <input type="text" name="first-name" placeholder="First Name" required />
+          <input type="text" name="last-name" placeholder="Last Name" required />
         </div>
-        <input type="email" placeholder="Email Address" required />
-        <input type="tel" placeholder="Phone Number (optional)" />
-        <select>
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="tel" name="phone" placeholder="Phone Number (optional)" />
+        <select name="service">
           <option value="" disabled selected>Service of Interest</option>
           <option>Sports Rehab &amp; Performance</option>
           <option>Concussion Care</option>
@@ -1572,7 +1573,7 @@
           <option>Body Maintenance &amp; Wellness</option>
           <option>Not Sure — Let's Talk</option>
         </select>
-        <textarea placeholder="Anything you'd like us to know? (optional)"></textarea>
+        <textarea name="message" placeholder="Anything you'd like us to know? (optional)"></textarea>
         <button type="submit" class="btn-primary form-submit">Send Request</button>
       </form>
     </div>
@@ -1683,14 +1684,31 @@
   // Form submission handler
   function handleSubmit(e) {
     e.preventDefault();
-    const btn = e.target.querySelector('.form-submit');
-    btn.textContent = 'Request Sent!';
-    btn.style.background = '#3A5A50';
-    setTimeout(() => {
-      btn.textContent = 'Book a Free Consultation';
-      btn.style.background = '';
-      e.target.reset();
-    }, 3000);
+    const form = e.target;
+    const btn = form.querySelector('.form-submit');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    })
+    .then(() => {
+      btn.textContent = 'Request Sent!';
+      btn.style.background = '#3A5A50';
+      setTimeout(() => {
+        btn.textContent = 'Send Request';
+        btn.style.background = '';
+        btn.disabled = false;
+        form.reset();
+      }, 3000);
+    })
+    .catch(() => {
+      btn.textContent = 'Error — Please Try Again';
+      btn.style.background = '#8B3A3A';
+      btn.disabled = false;
+    });
   }
 </script>
 
