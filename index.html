@@ -12,17 +12,17 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --teal:       #305C53;
-      --teal-dark:  #1E3D37;
-      --teal-deep:  #152B27;
-      --teal-light: #4A7C72;
-      --rust:       #8E523C;
-      --rust-light: #B8735A;
-      --cream:      #F5EDD6;
-      --cream-dark: #E8DCBF;
+      --teal:       #7E958E;
+      --teal-dark:  #284139;
+      --teal-deep:  #1C2D26;
+      --teal-light: #9BAFA8;
+      --rust:       #403928;
+      --rust-light: #6B5C40;
+      --cream:      #BFAE82;
+      --cream-dark: #A69870;
       --white:      #FFFFFF;
-      --text-dark:  #1A2E2A;
-      --text-mid:   #4E6460;
+      --text-dark:  #1A2B22;
+      --text-mid:   #556B62;
     }
 
     html { scroll-behavior: smooth; }
@@ -573,7 +573,7 @@
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: 270px 270px 480px;
+      grid-template-rows: 270px 270px;
       gap: 6px;
       padding: 0 2rem;
       max-width: 1180px;
@@ -907,7 +907,7 @@
       .gallery-item:nth-child(5),
       .gallery-item:nth-child(6) { grid-column: span 1; }
       .gallery-item:nth-child(1) { grid-column: span 2; }
-      .gallery-item:nth-child(6) { grid-column: span 2; height: 340px; }
+      .gallery-item:nth-child(6) { grid-column: span 2; }
 
       .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
       .footer-bottom { flex-direction: column; text-align: center; }
@@ -923,11 +923,6 @@
       .gallery-item { height: 200px; }
       .gallery-item:nth-child(1) { grid-column: span 1; }
     }
-
-    /* ════════════════════════════════════════
-       GALLERY — sailing portrait fix
-    ════════════════════════════════════════ */
-    .gallery-item:nth-child(6) img { object-position: center 8%; }
 
     /* ════════════════════════════════════════
        TELEHEALTH
@@ -1480,9 +1475,6 @@
     </div>
     <div class="gallery-item">
       <img src="images/gallery-outdoor.jpeg" alt="Outdoor adventures" />
-    </div>
-    <div class="gallery-item">
-      <img src="images/gallery-sailing.jpeg" alt="Sailing at the Channel Islands" />
     </div>
   </div>
 </section>
