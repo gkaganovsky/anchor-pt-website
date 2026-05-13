@@ -6,14 +6,14 @@
   <title>The Anchor Ventura Physical Therapy | Ventura, CA</title>
 
   <!-- Primary SEO -->
-  <meta name="description" content="The Anchor Ventura Physical Therapy — Doctor of Physical Therapy Greg Kaganovsky, DPT, offering sports rehab, concussion care, orthopedic rehab, and telehealth PT in Ventura, CA." />
+  <meta name="description" content="The Anchor Ventura Physical Therapy — Greg Kaganovsky, DPT, offering sports rehab, concussion care, orthopedic rehab, and telehealth PT serving Ventura, Oxnard, Camarillo, Thousand Oaks, Westlake, Agoura, and Moorpark, CA." />
   <meta name="keywords" content="physical therapy Ventura CA, PT Ventura, sports rehab Ventura, concussion specialist Ventura, orthopedic physical therapy, telehealth physical therapy California, Doctor of Physical Therapy Ventura, Greg Kaganovsky DPT" />
   <meta name="author" content="Greg Kaganovsky, DPT" />
   <link rel="canonical" href="https://anchorventurapt.com/" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/logo.png" />
-  <link rel="apple-touch-icon" href="images/logo.png" />
+  <link rel="icon" type="image/png" href="images/new_logo_2026-removebg-preview.png" />
+  <link rel="apple-touch-icon" href="images/new_logo_2026-removebg-preview.png" />
 
   <!-- Open Graph (Facebook, iMessage, LinkedIn previews) -->
   <meta property="og:type" content="website" />
@@ -35,9 +35,10 @@
     "@type": "PhysicalTherapist",
     "name": "The Anchor Ventura Physical Therapy",
     "url": "https://anchorventurapt.com",
-    "logo": "https://anchorventurapt.com/images/logo.png",
+    "logo": "https://anchorventurapt.com/images/new_logo_2026-removebg-preview.png",
     "image": "https://anchorventurapt.com/images/hero-sailboat.jpg",
-    "description": "Doctor of Physical Therapy Greg Kaganovsky offers sports rehab, concussion care, orthopedic rehab, and telehealth PT in Ventura, CA.",
+    "description": "Doctor of Physical Therapy Greg Kaganovsky offers sports rehab, concussion care, orthopedic rehab, and telehealth PT serving Ventura County including Ventura, Oxnard, Camarillo, Thousand Oaks, Westlake, Agoura, and Moorpark.",
+    "telephone": "+18183079709",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Ventura",
@@ -51,7 +52,13 @@
     },
     "areaServed": [
       { "@type": "City", "name": "Ventura" },
-      { "@type": "State", "name": "California" }
+      { "@type": "City", "name": "Oxnard" },
+      { "@type": "City", "name": "Camarillo" },
+      { "@type": "City", "name": "Thousand Oaks" },
+      { "@type": "City", "name": "Westlake Village" },
+      { "@type": "City", "name": "Agoura Hills" },
+      { "@type": "City", "name": "Moorpark" },
+      { "@type": "AdministrativeArea", "name": "Ventura County" }
     ],
     "priceRange": "$$",
     "employee": {
@@ -993,6 +1000,30 @@
       padding: 2.5rem;
       backdrop-filter: blur(10px);
     }
+    .calendly-wrap { margin-bottom: 0.5rem; }
+    .calendly-wrap h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--cream);
+      margin-bottom: 1rem;
+    }
+    .signup-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem 0;
+      color: rgba(191,153,130,0.45);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .signup-divider::before,
+    .signup-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(191,153,130,0.2);
+    }
     .signup-form-wrap h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.4rem;
@@ -1402,7 +1433,7 @@
 <!-- ═══════════════ NAV ═══════════════ -->
 <nav id="navbar">
   <a href="#home" class="nav-logo">
-    <img src="images/logo.png" alt="The Anchor Ventura Physical Therapy Logo" />
+    <img src="images/new_logo_2026-removebg-preview.png" alt="The Anchor Ventura Physical Therapy Logo" />
     <div class="nav-logo-text">
       <span class="name">The Anchor Ventura</span>
       <span class="sub">Physical Therapy</span>
@@ -1773,10 +1804,10 @@
 
   <div class="testimonials-actions">
     <!-- Replace YOUR_REVIEW_LINK with your Google Business review link -->
-    <a href="https://g.page/r/YOUR_REVIEW_LINK/review" target="_blank" rel="noopener" class="btn-google">
+    <a href="https://g.page/r/CXM2Gmuiy3SIEBM/review" target="_blank" rel="noopener" class="btn-google">
       ★&nbsp; Leave a Google Review
     </a>
-    <a href="https://g.page/r/YOUR_REVIEW_LINK" target="_blank" rel="noopener" class="btn-google-outline">
+    <a href="https://g.page/r/CXM2Gmuiy3SIEBM" target="_blank" rel="noopener" class="btn-google-outline">
       Read All Reviews
     </a>
   </div>
@@ -1878,6 +1909,20 @@
     </div>
 
     <div class="signup-form-wrap">
+      <!-- Calendly embed — replace YOUR-CALENDLY-USERNAME with your actual Calendly username -->
+      <div class="calendly-wrap">
+        <h3>Schedule Online</h3>
+        <div class="calendly-inline-widget"
+          data-url="https://calendly.com/theanchorphysicaltherapy"
+          style="min-width:100%;height:660px;">
+        </div>
+        <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      </div>
+
+      <div class="signup-divider">
+        <span>or send a message</span>
+      </div>
+
       <div id="success-message" style="display:none; background:rgba(130,191,172,0.15); border:1px solid rgba(130,191,172,0.4); border-radius:10px; padding:1.5rem; margin-bottom:1.5rem; text-align:center;">
         <div style="font-size:2rem; margin-bottom:0.5rem;">✓</div>
         <h4 style="font-family:'Playfair Display',serif; color:#82BFAC; font-size:1.2rem; margin-bottom:0.4rem;">Request Received!</h4>
@@ -1915,7 +1960,7 @@
     <!-- Brand -->
     <div class="footer-brand">
       <a href="#home" class="footer-brand-logo">
-        <img src="images/logo.png" alt="The Anchor Ventura Physical Therapy Logo" />
+        <img src="images/new_logo_2026-removebg-preview.png" alt="The Anchor Ventura Physical Therapy Logo" />
         <div>
           <span class="name">The Anchor Ventura</span>
           <span class="sub">Physical Therapy</span>
@@ -1948,7 +1993,7 @@
       <h4>Contact</h4>
       <div class="contact-item">
         <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-        <span>Ventura, California</span>
+        <span>Ventura County, CA<br><small style="opacity:0.7;font-size:0.78em;">Ventura · Oxnard · Camarillo · Thousand Oaks<br>Westlake · Agoura · Moorpark</small></span>
       </div>
       <div class="contact-item">
         <svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -1977,7 +2022,7 @@
   </div>
 
   <div class="footer-bottom">
-    <p>&copy; 2025 The Anchor Ventura Physical Therapy. All rights reserved.</p>
+    <p>&copy; 2026 The Anchor Ventura Physical Therapy. All rights reserved. &nbsp;·&nbsp; <a href="privacy.html" style="color:inherit;opacity:0.6;text-decoration:none;">Privacy Policy</a></p>
     <p>Made with care in Ventura, CA</p>
   </div>
 </footer>
