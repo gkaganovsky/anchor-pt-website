@@ -4,6 +4,68 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Anchor Ventura Physical Therapy | Ventura, CA</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="The Anchor Ventura Physical Therapy — Doctor of Physical Therapy Greg Kaganovsky, DPT, offering sports rehab, concussion care, orthopedic rehab, and telehealth PT in Ventura, CA." />
+  <meta name="keywords" content="physical therapy Ventura CA, PT Ventura, sports rehab Ventura, concussion specialist Ventura, orthopedic physical therapy, telehealth physical therapy California, Doctor of Physical Therapy Ventura, Greg Kaganovsky DPT" />
+  <meta name="author" content="Greg Kaganovsky, DPT" />
+  <link rel="canonical" href="https://anchorventurapt.com/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
+
+  <!-- Open Graph (Facebook, iMessage, LinkedIn previews) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://anchorventurapt.com/" />
+  <meta property="og:title" content="The Anchor Ventura Physical Therapy | Ventura, CA" />
+  <meta property="og:description" content="Sports rehab, concussion care, orthopedic rehab, and telehealth PT with Greg Kaganovsky, DPT — serving Ventura and all of California." />
+  <meta property="og:image" content="https://anchorventurapt.com/images/hero-sailboat.jpg" />
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Anchor Ventura Physical Therapy | Ventura, CA" />
+  <meta name="twitter:description" content="Sports rehab, concussion care, orthopedic rehab, and telehealth PT with Greg Kaganovsky, DPT — serving Ventura and all of California." />
+  <meta name="twitter:image" content="https://anchorventurapt.com/images/hero-sailboat.jpg" />
+
+  <!-- Local business structured data (Google rich results) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PhysicalTherapist",
+    "name": "The Anchor Ventura Physical Therapy",
+    "url": "https://anchorventurapt.com",
+    "logo": "https://anchorventurapt.com/images/logo.png",
+    "image": "https://anchorventurapt.com/images/hero-sailboat.jpg",
+    "description": "Doctor of Physical Therapy Greg Kaganovsky offers sports rehab, concussion care, orthopedic rehab, and telehealth PT in Ventura, CA.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ventura",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 34.2746,
+      "longitude": -119.2290
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Ventura" },
+      { "@type": "State", "name": "California" }
+    ],
+    "priceRange": "$$",
+    "employee": {
+      "@type": "Person",
+      "name": "Greg Kaganovsky",
+      "jobTitle": "Doctor of Physical Therapy",
+      "sameAs": "https://www.instagram.com/venturaphysicaltherapy"
+    },
+    "sameAs": [
+      "https://www.instagram.com/venturaphysicaltherapy"
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -304,6 +366,37 @@
 
     .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 
+    .hero-consult-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin-top: 1.4rem;
+      background: rgba(130,191,172,0.12);
+      border: 1px solid rgba(130,191,172,0.35);
+      color: #82BFAC;
+      padding: 0.45rem 1.2rem;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .hero-consult-pill:hover {
+      background: rgba(130,191,172,0.22);
+      border-color: rgba(130,191,172,0.55);
+    }
+    .hero-consult-dot {
+      width: 7px; height: 7px;
+      background: #82BFAC;
+      border-radius: 50%;
+      flex-shrink: 0;
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.7); }
+    }
+
     .hero-scroll {
       position: absolute;
       bottom: 2.5rem;
@@ -455,6 +548,63 @@
       margin: 0 auto;
     }
 
+    .about-video-wrap {
+      max-width: 1180px;
+      margin: 5rem auto 0;
+    }
+    .about-video-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 1rem;
+    }
+    .about-video-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #284139;
+      border: 1px solid rgba(130,191,172,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-video-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      opacity: 0.6;
+    }
+    .about-video-placeholder .play-icon {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      border: 2px solid #82BFAC;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-video-placeholder .play-icon::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 13px solid transparent;
+      border-bottom: 13px solid transparent;
+      border-left: 22px solid #82BFAC;
+      margin-left: 5px;
+    }
+    .about-video-placeholder p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      color: #82BFAC;
+      letter-spacing: 0.06em;
+    }
+
     .about-img-wrap { position: relative; }
     .about-img-wrap img {
       width: 100%;
@@ -515,7 +665,7 @@
     }
 
     .about-text p {
-      color: var(--text-mid);
+      color: rgba(191,153,130,0.72);
       font-size: 0.95rem;
       line-height: 1.85;
       margin-bottom: 1.1rem;
@@ -627,6 +777,169 @@
     /* ══════════════════════════════════════
        SIGNUP / BOOK
     ══════════════════════════════════════ */
+    /* ── Testimonials ── */
+    .testimonials { background: #403128; padding: 7rem 2rem; }
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .testimonials-header .section-title { color: var(--cream); }
+    .testimonials-header .section-label { color: var(--teal); }
+    .testimonials-header p {
+      color: rgba(191,153,130,0.7);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-top: 1rem;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto 3rem;
+    }
+    .testimonial-card {
+      background: #284139;
+      border: 1px solid rgba(130,191,172,0.14);
+      border-radius: 14px;
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .testimonial-stars {
+      display: flex;
+      gap: 3px;
+    }
+    .testimonial-stars span {
+      color: #82BFAC;
+      font-size: 1rem;
+    }
+    .testimonial-quote {
+      color: rgba(191,153,130,0.82);
+      font-size: 0.92rem;
+      line-height: 1.85;
+      font-style: italic;
+      flex: 1;
+    }
+    .testimonial-author {
+      font-family: 'Playfair Display', serif;
+      color: var(--cream);
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+    .testimonial-type {
+      font-size: 0.75rem;
+      color: var(--teal);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 0.15rem;
+    }
+    .testimonials-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn-google {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #BF9982;
+      color: #284139;
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-google:hover { background: #A67D68; transform: translateY(-2px); }
+    .btn-google-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: transparent;
+      color: #BF9982;
+      border: 1px solid rgba(191,153,130,0.4);
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .btn-google-outline:hover { border-color: rgba(191,153,130,0.8); transform: translateY(-2px); }
+    @media (max-width: 768px) {
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── FAQ ── */
+    .faq { background: #284139; padding: 7rem 2rem; }
+    .faq-inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .faq-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .faq-header .section-title { color: var(--cream); }
+    .faq-header .section-label { color: var(--teal); }
+    .faq-header p {
+      color: rgba(191,153,130,0.7);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-top: 1rem;
+    }
+    .faq-item {
+      border-bottom: 1px solid rgba(130,191,172,0.14);
+    }
+    .faq-item:first-of-type { border-top: 1px solid rgba(130,191,172,0.14); }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.4rem 0;
+      text-align: left;
+      color: var(--cream);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+    .faq-question:hover { color: var(--teal-light); }
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 20px; height: 20px;
+      border-right: 2px solid var(--teal);
+      border-bottom: 2px solid var(--teal);
+      transform: rotate(45deg);
+      transition: transform 0.3s ease;
+      margin-top: -4px;
+    }
+    .faq-item.open .faq-chevron { transform: rotate(-135deg); margin-top: 4px; }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 400px; }
+    .faq-answer p {
+      color: rgba(191,153,130,0.78);
+      font-size: 0.92rem;
+      line-height: 1.85;
+      padding-bottom: 1.4rem;
+    }
+    .faq-answer a { color: var(--teal); text-decoration: none; }
+    .faq-answer a:hover { text-decoration: underline; }
+
     .signup {
       background: var(--teal);
       padding: 7rem 2rem;
@@ -695,21 +1008,21 @@
     .form-group select {
       width: 100%;
       padding: 0.85rem 1.1rem;
-      border: 1px solid rgba(191,174,130,0.18);
+      border: 1px solid rgba(40,65,57,0.45);
       border-radius: 7px;
-      background: rgba(191,174,130,0.08);
-      color: var(--white);
+      background: rgba(30,46,36,0.45);
+      color: #BF9982;
       font-size: 0.88rem;
       font-family: 'Inter', sans-serif;
       transition: border-color 0.2s;
     }
     .form-group input::placeholder,
-    .form-group textarea::placeholder { color: rgba(191,174,130,0.4); }
+    .form-group textarea::placeholder { color: rgba(191,153,130,0.55); }
     .form-group input:focus,
     .form-group textarea:focus,
     .form-group select:focus {
       outline: none;
-      border-color: rgba(191,174,130,0.5);
+      border-color: rgba(40,65,57,0.75);
     }
     .form-group select option { background: var(--teal-dark); color: var(--white); }
     .form-group textarea { resize: none; height: 80px; }
@@ -1065,6 +1378,11 @@
       color: var(--cream);
       margin-bottom: 0.5rem;
     }
+    .telehealth-video-wrap {
+      max-width: 860px;
+      margin: 4rem auto 0;
+    }
+
     .telehealth-feature p {
       color: rgba(191,153,130,0.55);
       font-size: 0.83rem;
@@ -1095,6 +1413,7 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#telehealth">Telehealth</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#signup" class="nav-cta">Book Now</a></li>
   </ul>
@@ -1109,6 +1428,7 @@
   <a href="#services" class="mobile-link">Services</a>
   <a href="#telehealth" class="mobile-link">Telehealth</a>
   <a href="#about" class="mobile-link">About</a>
+  <a href="#faq" class="mobile-link">FAQ</a>
   <a href="#contact" class="mobile-link">Contact</a>
   <a href="#signup" class="mobile-link mobile-cta">Book a Session</a>
 </div>
@@ -1133,6 +1453,10 @@
       <a href="#signup" class="btn-primary">Book a Session</a>
       <a href="#about" class="btn-outline">Meet Greg</a>
     </div>
+    <a href="#signup" class="hero-consult-pill">
+      <span class="hero-consult-dot"></span>
+      Free 10-Minute Consultation — No Commitment
+    </a>
   </div>
 
   <div class="hero-scroll">
@@ -1334,6 +1658,33 @@
       </div>
     </div>
   </div>
+
+  <div class="about-video-wrap">
+    <div class="about-video-label">Meet Greg in Person</div>
+    <div class="about-video-container">
+      <iframe
+        src="https://www.youtube.com/embed/dJ9tHT91TVY"
+        title="Meet Greg Kaganovsky, DPT"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style="position:absolute;top:0;left:0;width:100%;height:100%;">
+      </iframe>
+    </div>
+
+    <div class="telehealth-video-wrap">
+      <div class="about-video-container">
+        <iframe
+          src="https://www.youtube.com/embed/EoZLI9At9DA"
+          title="Telehealth Physical Therapy — The Anchor Ventura PT"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          style="position:absolute;top:0;left:0;width:100%;height:100%;">
+        </iframe>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ═══════════════ GALLERY ═══════════════ -->
@@ -1375,6 +1726,145 @@
 </div>
 
 
+<!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-header">
+    <span class="section-label">Patient Stories</span>
+    <h2 class="section-title">What People Are Saying</h2>
+    <div class="divider"></div>
+    <p>Real results from real patients. Read their stories on Google.</p>
+  </div>
+
+  <div class="testimonials-grid">
+    <!-- Replace with real patient quotes — first name + last initial is standard -->
+    <div class="testimonial-card">
+      <div class="testimonial-stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <p class="testimonial-quote">"Greg is unlike any PT I've seen before. He actually listens, explains everything clearly, and the results speak for themselves. I was back on the trail in half the time I expected."</p>
+      <div>
+        <div class="testimonial-author">Patient Review</div>
+        <div class="testimonial-type">Sports Rehab</div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <p class="testimonial-quote">"I was skeptical about telehealth PT but Greg made it seamless. He could assess my movement through the camera and give corrections in real time. Incredibly effective."</p>
+      <div>
+        <div class="testimonial-author">Patient Review</div>
+        <div class="testimonial-type">Telehealth</div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-stars">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <p class="testimonial-quote">"After my concussion I struggled to find someone who really understood what I was going through. Greg's approach was thorough, compassionate, and genuinely helped me recover."</p>
+      <div>
+        <div class="testimonial-author">Patient Review</div>
+        <div class="testimonial-type">Concussion Care</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonials-actions">
+    <!-- Replace YOUR_REVIEW_LINK with your Google Business review link -->
+    <a href="https://g.page/r/YOUR_REVIEW_LINK/review" target="_blank" rel="noopener" class="btn-google">
+      ★&nbsp; Leave a Google Review
+    </a>
+    <a href="https://g.page/r/YOUR_REVIEW_LINK" target="_blank" rel="noopener" class="btn-google-outline">
+      Read All Reviews
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="faq-header">
+      <span class="section-label">Common Questions</span>
+      <h2 class="section-title">FAQ</h2>
+      <div class="divider"></div>
+      <p>Everything you need to know before your first session.</p>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        How does telehealth physical therapy work?
+        <span class="faq-chevron"></span>
+      </button>
+      <div class="faq-answer">
+        <p>Telehealth sessions are conducted over a secure video call on your computer, tablet, or phone. Greg will evaluate your movement, posture, and symptoms in real time — then guide you through exercises, manual techniques you can perform yourself, and coaching cues just as he would in person. It's a highly effective option for home exercise programs, follow-ups, injury prevention, and conditions that don't require hands-on treatment.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Do you accept insurance?
+        <span class="faq-chevron"></span>
+      </button>
+      <div class="faq-answer">
+        <p>The Anchor Ventura PT is primarily a cash-pay practice, which means you pay directly for your care without insurance acting as a middleman. This keeps sessions longer, more personalized, and focused entirely on you. If you have out-of-network benefits on your insurance plan, you may be eligible for partial reimbursement — we can provide a superbill (itemized receipt) for you to submit to your insurer. <a href="#signup">Contact us</a> if you have questions about your specific plan.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Do I need a doctor's referral to see a physical therapist?
+        <span class="faq-chevron"></span>
+      </button>
+      <div class="faq-answer">
+        <p>No. California is a direct access state, which means you can see a physical therapist without a physician's referral. You can book directly and get started right away. If your situation requires coordination with your doctor, Greg will communicate with your care team on your behalf.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        What should I expect on my first visit?
+        <span class="faq-chevron"></span>
+      </button>
+      <div class="faq-answer">
+        <p>Your first session is a thorough evaluation. Greg will review your history, goals, and any relevant imaging or medical records, then assess your movement, strength, and mobility. By the end of the visit you'll have a clear picture of what's going on and a personalized plan to address it. Most patients leave feeling heard and already moving better.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        How long are sessions and how many will I need?
+        <span class="faq-chevron"></span>
+      </button>
+      <div class="faq-answer">
+        <p>Initial evaluations are typically 60 minutes. Follow-up sessions are 45–60 minutes. The number of visits varies widely by condition and goal — some people feel significantly better in 4–6 sessions, while longer-term or complex cases may benefit from ongoing care. Greg will give you an honest estimate after your first visit so you can plan accordingly.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Do you offer a free consultation?
+        <span class="faq-chevron"></span>
+      </button>
+      <div class="faq-answer">
+        <p>Yes — a free 10-minute phone consultation is available for anyone who wants to ask questions before committing. It's a no-pressure conversation to make sure we're the right fit. <a href="#signup">Book yours here.</a></p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        What conditions do you treat?
+        <span class="faq-chevron"></span>
+      </button>
+      <div class="faq-answer">
+        <p>Greg treats a wide range of musculoskeletal and neurological conditions including sports injuries, post-surgical rehab, back and neck pain, shoulder and knee injuries, concussions, and general orthopedic issues. He also works with athletes on performance optimization and injury prevention. If you're unsure whether PT is right for your situation, the free consultation is a great place to start.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- ═══════════════ SIGNUP / BOOK ═══════════════ -->
 <section class="signup" id="signup">
   <div class="signup-inner">
@@ -1404,6 +1894,7 @@
         <input type="tel" name="phone" placeholder="Phone Number (optional)" />
         <select name="service">
           <option value="" disabled selected>Service of Interest</option>
+          <option>Free 10-Minute Consultation</option>
           <option>Sports Rehab &amp; Performance</option>
           <option>Concussion Care</option>
           <option>Orthopedic Rehabilitation</option>
@@ -1492,6 +1983,22 @@
 </footer>
 
 <script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
   // Navbar scroll behavior
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
