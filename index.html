@@ -960,6 +960,36 @@
     .faq-answer a { color: var(--teal); text-decoration: none; }
     .faq-answer a:hover { text-decoration: underline; }
 
+    /* ── What Sets Us Apart ── */
+    .apart { background: #284139; padding: 7rem 2rem; }
+    .apart-inner { max-width: 1100px; margin: 0 auto; }
+    .apart-header { text-align: center; margin-bottom: 4rem; }
+    .apart-header .section-title { color: var(--cream); }
+    .apart-header .section-label { color: var(--teal); }
+    .apart-header p { color: rgba(191,153,130,0.7); font-size: 0.95rem; line-height: 1.7; margin-top: 1rem; max-width: 620px; margin-left: auto; margin-right: auto; }
+    .apart-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .apart-card {
+      background: #1E2E24;
+      border: 1px solid rgba(130,191,172,0.15);
+      border-radius: 14px;
+      padding: 2rem 1.75rem;
+    }
+    .apart-card-icon {
+      width: 48px; height: 48px;
+      background: rgba(130,191,172,0.1);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+    .apart-card-icon svg { width: 22px; height: 22px; stroke: #82BFAC; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .apart-card h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--cream); margin-bottom: 0.75rem; }
+    .apart-card p { color: rgba(191,153,130,0.75); font-size: 0.88rem; line-height: 1.8; }
+    @media (max-width: 768px) { .apart-grid { grid-template-columns: 1fr; } }
+
     .signup {
       background: #1E2E24;
       padding: 7rem 2rem;
@@ -1448,13 +1478,14 @@
   <a href="#home" class="nav-logo">
     <img src="images/new_logo_2026-removebg-preview.png" alt="The Anchor Ventura Physical Therapy Logo" />
     <div class="nav-logo-text">
-      <span class="name">The Anchor Ventura</span>
+      <span class="name">The Anchor</span>
       <span class="sub">Physical Therapy</span>
     </div>
   </a>
 
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
+    <li><a href="#apart">Why Us</a></li>
     <li><a href="#telehealth">Telehealth</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#faq">FAQ</a></li>
@@ -1472,11 +1503,12 @@
   <a href="#home" class="mobile-nav-logo">
     <img src="images/new_logo_2026-removebg-preview.png" alt="The Anchor Ventura PT" />
     <div>
-      <div class="name">The Anchor Ventura</div>
+      <div class="name">The Anchor</div>
       <div class="sub">Physical Therapy</div>
     </div>
   </a>
   <a href="#services" class="mobile-link">Services</a>
+  <a href="#apart" class="mobile-link">Why Us</a>
   <a href="#telehealth" class="mobile-link">Telehealth</a>
   <a href="#about" class="mobile-link">About</a>
   <a href="#faq" class="mobile-link">FAQ</a>
@@ -1494,11 +1526,10 @@
   </svg>
 
   <div class="hero-content">
-    <span class="hero-badge">Ventura, California</span>
     <h1>Your Anchor for<br><em>Strength &amp; Recovery</em></h1>
     <p class="hero-slogan">
-      Your anchor for strength, stability, and recovery.
-      Get back to what you love doing the most.
+      Expert, one-on-one physical therapy in Ventura County.
+      Get back to doing what you love — fully, and for good.
     </p>
     <div class="hero-actions">
       <a href="#signup" class="btn-primary">Book a Session</a>
@@ -1506,7 +1537,7 @@
     </div>
     <a href="#signup" class="hero-consult-pill">
       <span class="hero-consult-dot"></span>
-      Free 10-Minute Consultation — No Commitment
+      Complimentary 20-Minute Consultation
     </a>
   </div>
 
@@ -1520,20 +1551,20 @@
 <div class="trust-bar">
   <div class="trust-bar-inner">
     <div class="trust-item">
-      <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      Doctor of Physical Therapy
+      <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      Hollywood Beach Gym, Oxnard, CA
     </div>
     <div class="trust-item">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-      3+ Years Clinical Experience
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.69a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.14a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      <a href="tel:+18183079709" style="color:inherit;text-decoration:none;">(818) 307-9709</a>
     </div>
     <div class="trust-item">
-      <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-      Ventura Community Focused
+      <svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      <a href="mailto:theanchorphysicaltherapy@gmail.com" style="color:inherit;text-decoration:none;">theanchorphysicaltherapy@gmail.com</a>
     </div>
     <div class="trust-item">
-      <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
-      Evidence-Based Care
+      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Mon – Fri: 8am – 6pm &nbsp;·&nbsp; Sat: By Appointment
     </div>
   </div>
 </div>
@@ -1592,6 +1623,41 @@
   </div>
 </section>
 
+<!-- ═══════════════ WHAT SETS US APART ═══════════════ -->
+<section class="apart" id="apart">
+  <div class="apart-inner">
+    <div class="apart-header">
+      <span class="section-label">The Anchor Difference</span>
+      <h2 class="section-title">What Sets Us Apart</h2>
+      <div class="divider"></div>
+      <p>Not all physical therapy is created equal. Here's what you can expect when you choose The Anchor.</p>
+    </div>
+    <div class="apart-grid">
+      <div class="apart-card">
+        <div class="apart-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h3>One-on-One, Every Session</h3>
+        <p>Every visit is a full hour with Greg — a Doctor of Physical Therapy — from start to finish. No aides, no assistants, no being passed around. Just undivided attention on you and your recovery.</p>
+      </div>
+      <div class="apart-card">
+        <div class="apart-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+        </div>
+        <h3>Your Plan, Built for You</h3>
+        <p>Cookie-cutter programs don't work. Your treatment plan is built around your specific injury, goals, and lifestyle — not a generic protocol. Every exercise, every session, has a purpose.</p>
+      </div>
+      <div class="apart-card">
+        <div class="apart-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3>Continuity of Care</h3>
+        <p>Greg knows your history, your progress, and your goals — session after session. No re-explaining yourself to a new face every visit. Consistent care means faster, more lasting results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════ TELEHEALTH ═══════════════ -->
 <section class="telehealth" id="telehealth">
   <div class="telehealth-inner">
@@ -1601,11 +1667,15 @@
         <h2 class="section-title">Care From<br>Anywhere</h2>
         <div class="divider"></div>
         <p>
-          Not every session requires you to come in. The Anchor Ventura now offers telehealth services so you can receive expert physical therapy guidance from the comfort of your home — whether you're in Ventura, traveling, or simply prefer the convenience of virtual care.
+          Not every session requires you to come in. The Anchor offers telehealth services so you can receive expert physical therapy guidance from the comfort of your home — whether you're in Ventura County, traveling, or anywhere in California.
         </p>
         <p style="color:rgba(191,153,130,0.65);font-size:0.95rem;line-height:1.8;margin-top:0.75rem;">
           Telehealth sessions are ideal for follow-up consultations, home exercise program reviews, movement coaching, and ongoing education — all via secure video call.
         </p>
+        <div style="margin-top:1.25rem; padding:1.1rem 1.4rem; background:rgba(130,191,172,0.1); border-left:3px solid #82BFAC; border-radius:0 8px 8px 0;">
+          <p style="color:#82BFAC; font-size:0.88rem; font-weight:600; margin-bottom:0.3rem; letter-spacing:0.04em;">CONCUSSION TELEHEALTH</p>
+          <p style="color:rgba(191,153,130,0.8); font-size:0.88rem; line-height:1.75; margin:0;">Concussion recovery doesn't always require being in the room. Greg specializes in remote concussion care — assessment, symptom tracking, return-to-sport guidance, and cognitive rehab — available to patients throughout California.</p>
+        </div>
         <div class="telehealth-badge">
           <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
           <span>HIPAA-conscious, easy to join — just a link sent to your phone or email. No app download required.</span>
@@ -1762,6 +1832,9 @@
     <div class="gallery-item">
       <img src="images/gallery-outdoor.jpeg" alt="Outdoor adventures" />
     </div>
+    <div class="gallery-item">
+      <img src="images/galler-greg-adidas-base.jpeg" alt="Greg Kaganovsky with soccer ball" style="object-position: center 20%;" />
+    </div>
   </div>
 </section>
 
@@ -1843,31 +1916,21 @@
 
     <div class="faq-item">
       <button class="faq-question" aria-expanded="false">
-        How does telehealth physical therapy work?
+        Do you offer a complimentary consultation?
         <span class="faq-chevron"></span>
       </button>
       <div class="faq-answer">
-        <p>Telehealth sessions are conducted over a secure video call on your computer, tablet, or phone. Greg will evaluate your movement, posture, and symptoms in real time — then guide you through exercises, manual techniques you can perform yourself, and coaching cues just as he would in person. It's a highly effective option for home exercise programs, follow-ups, injury prevention, and conditions that don't require hands-on treatment.</p>
+        <p>Yes — a complimentary 20-minute phone consultation is available for anyone who wants to ask questions and see if we're the right fit. It's a relaxed conversation, no pressure. <a href="#signup">Book yours here.</a></p>
       </div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question" aria-expanded="false">
-        Do you accept insurance?
+        What conditions do you treat?
         <span class="faq-chevron"></span>
       </button>
       <div class="faq-answer">
-        <p>The Anchor Ventura PT is primarily a cash-pay practice, which means you pay directly for your care without insurance acting as a middleman. This keeps sessions longer, more personalized, and focused entirely on you. If you have out-of-network benefits on your insurance plan, you may be eligible for partial reimbursement — we can provide a superbill (itemized receipt) for you to submit to your insurer. <a href="#signup">Contact us</a> if you have questions about your specific plan.</p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">
-        Do I need a doctor's referral to see a physical therapist?
-        <span class="faq-chevron"></span>
-      </button>
-      <div class="faq-answer">
-        <p>No. California is a direct access state, which means you can see a physical therapist without a physician's referral. You can book directly and get started right away. If your situation requires coordination with your doctor, Greg will communicate with your care team on your behalf.</p>
+        <p>Greg treats a wide range of musculoskeletal and neurological conditions including sports injuries, post-surgical rehab, back and neck pain, shoulder and knee injuries, concussions, and general orthopedic issues. He also works with athletes on performance optimization and injury prevention. If you're unsure whether PT is right for your situation, the complimentary consultation is a great place to start.</p>
       </div>
     </div>
 
@@ -1893,21 +1956,31 @@
 
     <div class="faq-item">
       <button class="faq-question" aria-expanded="false">
-        Do you offer a free consultation?
+        Do I need a doctor's referral to see a physical therapist?
         <span class="faq-chevron"></span>
       </button>
       <div class="faq-answer">
-        <p>Yes — a free 10-minute phone consultation is available for anyone who wants to ask questions before committing. It's a no-pressure conversation to make sure we're the right fit. <a href="#signup">Book yours here.</a></p>
+        <p>No. California is a direct access state, which means you can see a physical therapist without a physician's referral. You can book directly and get started right away. If your situation requires coordination with your doctor, Greg will communicate with your care team on your behalf.</p>
       </div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question" aria-expanded="false">
-        What conditions do you treat?
+        How does telehealth physical therapy work?
         <span class="faq-chevron"></span>
       </button>
       <div class="faq-answer">
-        <p>Greg treats a wide range of musculoskeletal and neurological conditions including sports injuries, post-surgical rehab, back and neck pain, shoulder and knee injuries, concussions, and general orthopedic issues. He also works with athletes on performance optimization and injury prevention. If you're unsure whether PT is right for your situation, the free consultation is a great place to start.</p>
+        <p>Telehealth sessions are conducted over a secure video call on your computer, tablet, or phone. Greg will evaluate your movement, posture, and symptoms in real time — then guide you through exercises, manual techniques you can perform yourself, and coaching cues just as he would in person. It's a highly effective option for home exercise programs, follow-ups, injury prevention, and conditions that don't require hands-on treatment.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Do you accept insurance?
+        <span class="faq-chevron"></span>
+      </button>
+      <div class="faq-answer">
+        <p>We'd love to chat about what works best for your situation — reach out for your complimentary consultation and we can go over payment options together. Patients with out-of-network benefits may also be eligible for partial reimbursement from their insurer; we can provide the documentation you need to submit a claim. <a href="#signup">Get in touch</a> and we'll figure it out.</p>
       </div>
     </div>
 
@@ -1957,7 +2030,7 @@
         <input type="tel" name="phone" placeholder="Phone Number (optional)" />
         <select name="service">
           <option value="" disabled selected>Service of Interest</option>
-          <option>Free 10-Minute Consultation</option>
+          <option>Complimentary 20-Minute Consultation</option>
           <option>Sports Rehab &amp; Performance</option>
           <option>Concussion Care</option>
           <option>Orthopedic Rehabilitation</option>
@@ -1980,7 +2053,7 @@
       <a href="#home" class="footer-brand-logo">
         <img src="images/new_logo_2026-removebg-preview.png" alt="The Anchor Ventura Physical Therapy Logo" />
         <div>
-          <span class="name">The Anchor Ventura</span>
+          <span class="name">The Anchor</span>
           <span class="sub">Physical Therapy</span>
         </div>
       </a>
@@ -1999,9 +2072,12 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#apart">Why Us</a></li>
         <li><a href="#telehealth">Telehealth</a></li>
         <li><a href="#about">About Greg</a></li>
-            <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#signup">Book Now</a></li>
       </ul>
     </div>
@@ -2027,15 +2103,6 @@
       </div>
     </div>
 
-    <!-- Newsletter -->
-    <div class="footer-newsletter">
-      <h4>Stay Connected</h4>
-      <p>Wellness tips, new service updates, and exclusive content delivered straight to your inbox.</p>
-      <div class="newsletter-wrap">
-        <input type="email" placeholder="your@email.com" />
-        <button class="newsletter-btn">Subscribe</button>
-      </div>
-    </div>
 
   </div>
 
